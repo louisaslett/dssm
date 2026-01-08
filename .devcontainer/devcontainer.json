@@ -1,0 +1,13 @@
+{
+  "name": "${localWorkspaceFolderBasename}_v1.0.0",
+  "image": "ghcr.io/louisaslett/dssm:latest",
+  "forwardPorts": [8787],
+  "portsAttributes": {
+    "8787": {
+      "label": "RStudio",
+      "requireLocalPort": true,
+      "onAutoForward": "ignore"
+    }
+  },
+  "postAttachCommand": "sudo rstudio-server start"
+}
